@@ -11,13 +11,14 @@ ua = 'ckanapi/1.0'
 
 ckan = RemoteCKAN(host, apikey=key, user_agent=ua)
 
+# limit data to receive only a specific amount of days (0 = no limitation)
 day_limit = 0
 
 
 def import_data():
     # request to influx api
     # no limitation to get all available data
-    request = urllib.request.Request('http://pvvisu-n1.cs.technikum-wien.at:8086/query?u=apiuser&p=UZaXh4YPx7_x2cQxAxppNgYbA8&db=pvlog&q=select%20*%20from%20pvlog01%20order%20by%20time%20desc%20limit%20'+str(day_limit*17280))
+    request = urllib.request.Request('http://pvvisu-n1.cs.technikum-wien.at:8086/query?u=apiuser&p=INSERT_PASSWORD_HERE&db=pvlog&q=select%20*%20from%20pvlog01%20order%20by%20time%20desc%20limit%20'+str(day_limit*17280))
     response = urllib.request.urlopen(request)
 
     # parse response data
