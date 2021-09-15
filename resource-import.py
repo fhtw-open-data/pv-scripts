@@ -6,7 +6,7 @@ from ckanapi import RemoteCKAN
 import datetime
 
 host = "http://10.64.54.1"
-key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjczMzcxODUsImp0aSI6IlR0Zm1OV3c1dVdOSW1sTk91Ql9rTXFBMlNocUNGMGVRdkV3ck1PdURmWXNIR2NfV3ZWTkpidEZ1YkFIc2ZpSVYzUElYSDlEQk1QWlhaenl5In0.EJicDfM0IG5Qv2ogafq0rlrMIIgfyKlq5DC52N4hfks"
+key = "INSERT_KEY_HERE"
 ua = 'ckanapi/1.0'
 
 ckan = RemoteCKAN(host, apikey=key, user_agent=ua)
